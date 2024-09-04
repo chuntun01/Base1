@@ -15,7 +15,7 @@ const FreeTrialForm: React.FC = () => {
               data-aos-duration="1000"
               data-aos-delay="200"
               style={{
-                backgroundImage: `url(/images/woman2.jpg)`,
+                backgroundImage: `url(#)`,
               }}
             >
               <Image
@@ -34,20 +34,19 @@ const FreeTrialForm: React.FC = () => {
               data-aos-duration="1000"
               data-aos-delay="400"
             >
-              <h2>Start your free trial</h2>
+              <h2>Đăng Kí Nhận Ưu Đãi</h2>
 
               <form className="newsletter-form">
                 <input
                   type="email"
                   className="input-newsletter"
-                  placeholder="Enter your business email here"
+                  placeholder="Nhập Địa Chỉ Email"
                 />
-                <button type="submit">Sign Up Free</button>
+                <button type="submit">Đăng Kí </button>
               </form>
 
               <p>
-                Test out the Machine Learning features for 14 days, no credit
-                card required.
+                Đăng kí để nhận được ưu đãi sớm nhất từ chúng tôi
               </p>
             </div>
           </div>

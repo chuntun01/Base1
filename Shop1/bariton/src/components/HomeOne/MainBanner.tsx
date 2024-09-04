@@ -10,46 +10,41 @@ const MainBanner: React.FC = () => {
       <div 
         className="main-banner"
         style={{ 
-          backgroundImage: `url(/images/main-banner.jpg)`
+          backgroundImage: `url(/images/Banner/mainbn.webp)`
         }}
       >
         <div className="d-table">
           <div className="d-table-cell">
             <div className="container-fluid">
               <div className="main-banner-content">
-                <h1
+                {/* <h1
                   data-aos="fade-up"
                   data-aos-duration="1000"
                   data-aos-delay="100"
                 >
-                  World’s Leading Machine Learning Company
-                </h1>
+                Shop Thời Trang
+                </h1> */}
 
-                <p
+                {/* <p
                   data-aos="fade-up"
                   data-aos-duration="1000"
                   data-aos-delay="200"
                 >
-                  ML today are able to supply needful of help, information, and
-                  positive experience of maintaining intimacy with customers.
-                  Eventually, chatbot ideas bring a pleasant experience of all
-                  these qualities into the conversation.
-                </p>
-
+                  Ở đây có bán đồ đẹp nhưng mắc 
+                </p> */}
+{/* 
                 <div
                   className="btn-box"
                   data-aos="fade-up"
                   data-aos-duration="1000"
                   data-aos-delay="300"
                 >
-                  <Link href="/contact" className="btn btn-primary">
-                    Schedule A Demo
+                  <Link href="/shop" className="btn btn-primary">
+                  Đi tới mua sắm
                   </Link>
 
-                  <Link href="/contact" className="optional-btn">
-                    Get Started Free
-                  </Link>
-                </div>
+                  
+                </div> */}
               </div>
             </div>
           </div>

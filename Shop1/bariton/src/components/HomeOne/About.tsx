@@ -12,25 +12,30 @@ const About: React.FC = () => {
           <div className="row align-items-center">
             <div className="col-lg-6 col-md-12">
               <div className="about-image">
+              
                 <Image
-                  src="/images/about/about1.jpg"
+                  src="/images/Banner/bn1.webp"
                   alt="image"
                   data-aos="fade-in"
                   data-aos-duration="1000"
                   data-aos-delay="200"
                   width={360}
                   height={300}
+                  style={{ borderRadius: '15px' }}
+                  
                 />
                 <Image
-                  src="/images/about/about2.jpg"
+                  src="/images/Banner/nu1.webp"
                   alt="image"
                   data-aos="fade-in"
                   data-aos-duration="1000"
                   data-aos-delay="400"
                   width={360}
                   height={300}
+                  style={{ borderRadius: '15px' }}
                 />
-              </div>
+              
+            </div>
             </div>
 
             <div className="col-lg-6 col-md-12">
@@ -40,23 +45,14 @@ const About: React.FC = () => {
                 data-aos-duration="1000"
                 data-aos-delay="600"
               >
-                <h2>Engaging New Audiences Through Smart Approach</h2>
+                <h2>Chúng tôi luôn lắng nghe bạn </h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea.
+                “Sản phẩm luôn mới, chất lượng hàng đầu, giá cả hợp lý, mang đến cho bạn sự lựa chọn hoàn hảo. Hãy đến với chúng tôi để khám phá những bộ sưu tập thời trang mới nhất với mức giá ưu đãi nhất.”
                 </p>
-                <p>
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised words which don't look
-                  even slightly believable. If you are going to use a passage of
-                  Lorem Ipsum, you need to be sure there isn't.
-                </p>
+               
 
-                <Link href="/about-us" className="btn btn-primary">
-                  Discover More
+                <Link href="/shop" className="btn btn-primary">
+                  Mua sắm 
                 </Link>
               </div>
             </div>

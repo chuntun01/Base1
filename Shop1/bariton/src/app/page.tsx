@@ -1,7 +1,6 @@
 import Navbar from '../components/Layouts/Navbar';
 import MainBanner from '../components/HomeOne/MainBanner';
 import About from '../components/HomeOne/About';
-import Services from '../components/HomeOne/Services';
 import Webinar from '../components/HomeOne/Webinar';
 import PartnerContent from '../components/Common/PartnerContent';
 import FeedbackSlider from '../components/Common/FeedbackSlider';
@@ -19,18 +18,17 @@ export default function Home() {
 
       <About />
 
-      <Services />
+    
 
       <Webinar />
 
-      <PartnerContent />
+     
 
       <FeedbackSlider />
 
-      <PricingCard />
 
       <BlogPost />
-
+      
       <FreeTrialForm />
 
       <Footer />
