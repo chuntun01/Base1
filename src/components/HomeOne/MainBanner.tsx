@@ -10,29 +10,28 @@ const MainBanner: React.FC = () => {
       <div 
         className="main-banner"
         style={{ 
-          backgroundImage: `url(/images/Banner/mainbn.webp)`
+          backgroundImage: `url(/images/Banner/main-banner.jpg)`
         }}
       >
         <div className="d-table">
           <div className="d-table-cell">
             <div className="container-fluid">
               <div className="main-banner-content">
-                {/* <h1
+              <h1
                   data-aos="fade-up"
                   data-aos-duration="1000"
                   data-aos-delay="100"
                 >
-                Shop Thời Trang
-                </h1> */}
-
-                {/* <p
+                Shopping with Bariton 
+                </h1> 
+                <p
                   data-aos="fade-up"
                   data-aos-duration="1000"
                   data-aos-delay="200"
                 >
-                  Ở đây có bán đồ đẹp nhưng mắc 
-                </p> */}
-{/* 
+                  
+                </p> 
+
                 <div
                   className="btn-box"
                   data-aos="fade-up"
@@ -44,13 +43,13 @@ const MainBanner: React.FC = () => {
                   </Link>
 
                   
-                </div> */}
+                </div> 
               </div>
             </div>
           </div>
         </div>
 
-        {/* Featured Services */}
+         Featured Services 
         <FeaturedServices />
       </div>
     </>

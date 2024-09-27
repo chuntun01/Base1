@@ -11,7 +11,23 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules"; // Import Aut
 import RelatedProducts from "../SingleProducts/RelatedProducts";
 import ProductsDetailsTab from "../SingleProducts/ProductsDetailsTab";
 
-const SingleProductsContent: React.FC = () => {
+export interface ISanPham {
+  id: number;
+  title: string;
+  image: string;
+  content: string;
+  price: number;
+  oldprice: number;
+  image1: string;
+  image2: string;
+}
+
+export interface IResData {
+  sanPhams: ISanPham[];
+}
+
+
+  export default function ({ sanPham }: { sanPham: ISanPham;}) {
   const [quantity, setQuantity] = useState(1);
   const swiperRef = useRef<any>(null); // Create a ref for Swiper instance
   const totalSlides = 3; // Set total number of slides
@@ -39,14 +55,14 @@ const SingleProductsContent: React.FC = () => {
               ref={swiperRef}
               navigation={true}
               pagination={{ clickable: true }}
-              autoplay={{ delay: 1000, disableOnInteraction: false }} // Autoplay configuration
-              modules={[Navigation, Pagination, Autoplay]} // Include Autoplay module
-              onSlideChange={handleSlideChange} // Handle slide change
+              autoplay={{ delay: 1000, disableOnInteraction: false }}
+              modules={[Navigation, Pagination, Autoplay]}
+              onSlideChange={handleSlideChange}
               className="product-image-slider"
             >
               <SwiperSlide>
                 <Image
-                  src="/images/shop/nam1.jpg"
+                  src={sanPham.image}
                   alt="product"
                   width={800}
                   height={850}
@@ -55,7 +71,7 @@ const SingleProductsContent: React.FC = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <Image
-                  src="/images/shop/nam1.1.jpg"
+                  src={sanPham.image1}
                   alt="product"
                   width={800}
                   height={850}
@@ -64,7 +80,7 @@ const SingleProductsContent: React.FC = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <Image
-                  src="/images/shop/nam1.2.jpg"
+                  src={sanPham.image2}
                   alt="product"
                   width={800}
                   height={850}
@@ -76,15 +92,13 @@ const SingleProductsContent: React.FC = () => {
 
           <div className="col-lg-6">
             <div className="product-details-desc">
-              <h3>ÁO SƠ MI NGẮN TAY HỌA TIẾT</h3>
+              <h3>{sanPham.title}</h3>
 
               <div className="price">
-                <span className="new-price">320.000 VNĐ</span>
-                <span className="old-price">400.000 VNĐ</span>
+                <span className="new-price">{sanPham.price}VND</span>
+                <span className="old-price">{sanPham.oldprice}VND</span>
               </div>
-              <p>
-               Chọn size
-              </p>
+              <p>Chọn size</p>
 
               {/* Radio Button Group */}
               <div style={{ display: "flex", gap: "30px" }}>
@@ -96,8 +110,13 @@ const SingleProductsContent: React.FC = () => {
                 ))}
               </div>
 
-              <div className="product-add-to-cart" style={{ marginTop: "20px" }}>
-                <div style={{ display: "flex", gap: "20px", alignItems: "center" }}>
+              <div
+                className="product-add-to-cart"
+                style={{ marginTop: "20px" }}
+              >
+                <div
+                  style={{ display: "flex", gap: "20px", alignItems: "center" }}
+                >
                   <button
                     onClick={() => changeQuantity(-1)}
                     style={{
@@ -148,7 +167,11 @@ const SingleProductsContent: React.FC = () => {
                 </div>
               </div>
 
-              <Link href="#" className="btn btn-light" style={{ marginTop: "20px" }}>
+              <Link
+                href="#"
+                className="btn btn-light"
+                style={{ marginTop: "20px" }}
+              >
                 Mua ngay
               </Link>
             </div>
@@ -163,6 +186,5 @@ const SingleProductsContent: React.FC = () => {
       <RelatedProducts />
     </section>
   );
-};
+}
 
-export default SingleProductsContent;

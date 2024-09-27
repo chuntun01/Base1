@@ -42,24 +42,15 @@ const ContactFormContent: React.FC = () => {
             <div className="contact-info-content">
               <h3>Contact us by Phone Number or Email Address</h3>
               <h2>
-                <span className="number">+088 130 629 8615</span>
+                <span className="number">0905298506</span>
                 <span className="or">OR</span>
-                <span className="email">hello@bariton.com</span>
+                <span className="email">Hotrungtuan18062004@gmail.com</span>
               </h2>
 
               <ul className="social">
                 <li>
                   <a
-                    href="https://twitter.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <i className="fab fa-twitter"></i>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.youtube.com/"
+                    href="https://www.youtube.com/@trungtuan1114"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -68,7 +59,7 @@ const ContactFormContent: React.FC = () => {
                 </li>
                 <li>
                   <a
-                    href="https://www.facebook.com/"
+                    href="https://www.facebook.com/profile.php?id=100045883125164"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -77,16 +68,7 @@ const ContactFormContent: React.FC = () => {
                 </li>
                 <li>
                   <a
-                    href="https://www.linkedin.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <i className="fab fa-linkedin-in"></i>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.instagram.com/"
+                    href="https://www.instagram.com/tr.t01"
                     target="_blank"
                     rel="noreferrer"
                   >

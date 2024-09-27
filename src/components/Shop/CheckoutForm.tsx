@@ -2,6 +2,20 @@
 
 import React from "react";
 import Link from "next/link";
+export interface ISanPham {
+  id: number;
+  title: string;
+  image: string;
+  content: string;
+  price: number;
+  oldprice: number;
+  image1: string;
+  image2: string;
+}
+
+export interface IResData {
+  sanPhams: ISanPham[];
+}
 
 const CheckoutForm: React.FC = () => {
   return (
@@ -12,9 +26,7 @@ const CheckoutForm: React.FC = () => {
             <div className="col-lg-12 col-md-12">
               <div className="user-actions">
                 <i className="fas fa-sign-in-alt"></i>
-                <span>
-                  Returning customer? <Link href="#">Click here to login</Link>
-                </span>
+                
               </div>
             </div>
           </div>
@@ -182,8 +194,8 @@ const CheckoutForm: React.FC = () => {
                     <table className="table table-bordered">
                       <thead>
                         <tr>
-                          <th scope="col">Product Name</th>
-                          <th scope="col">Total</th>
+                          <th scope="col">Tên sản phẩm</th>
+                          <th scope="col">thành tiền </th>
                         </tr>
                       </thead>
 

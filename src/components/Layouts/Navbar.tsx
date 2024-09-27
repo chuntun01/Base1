@@ -94,10 +94,10 @@ const Navbar: React.FC = () => {
                       onClick={handleToggleSearchModal}
                     ></i>
                   </div>
-                  {/* 
+                   
                   <Link href='/contact/' className='btn btn-primary'>
                     quan que
-                  </Link> */}
+                  </Link> 
                 </div>
               </div>
             </nav>

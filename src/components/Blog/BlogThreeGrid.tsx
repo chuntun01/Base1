@@ -13,7 +13,7 @@ const BlogThreeGrid: React.FC = () => {
             <div className="col-lg-4 col-md-6">
               <div className="single-blog-post">
                 <div className="entry-thumbnail">
-                  <Link href="https://vnexpress.net/thoi-trang-viet-nam-su-chuyen-minh-manh-me-trong-nam-2024-4567328.html">
+                  <Link href="https://www.elle.vn/the-gioi-thoi-trang/thoi-trang-viet-nam-qua-cac-thoi-ky">
                     <Image
                       src="/images/blog/blog1.jpg"
                       alt="Tìm Hiểu Về Sự Phát Triển Của Thời Trang Việt Nam"
@@ -29,7 +29,7 @@ const BlogThreeGrid: React.FC = () => {
                       <li>
                         <Link href="#">Admin</Link>
                       </li>
-                      <li>Tháng 2 25, 2024</li>
+                      <li>Tháng 8 25, 2024</li>
                     </ul>
                   </div>
 
@@ -69,7 +69,7 @@ const BlogThreeGrid: React.FC = () => {
                       <li>
                         <Link href="#">Admin</Link>
                       </li>
-                      <li>Tháng 2 26, 2024</li>
+                      <li>Tháng 8 26, 2024</li>
                     </ul>
                   </div>
 
@@ -108,7 +108,7 @@ const BlogThreeGrid: React.FC = () => {
                       <li>
                         <Link href="#">Admin</Link>
                       </li>
-                      <li>Tháng 2 27, 2024</li>
+                      <li>Tháng 8 27, 2024</li>
                     </ul>
                   </div>
 
@@ -147,7 +147,7 @@ const BlogThreeGrid: React.FC = () => {
                       <li>
                         <Link href="#">Admin</Link>
                       </li>
-                      <li>Tháng 2 28, 2024</li>
+                      <li>Tháng 8 28, 2024</li>
                     </ul>
                   </div>
 
@@ -186,7 +186,7 @@ const BlogThreeGrid: React.FC = () => {
                       <li>
                         <Link href="#">Admin</Link>
                       </li>
-                      <li>Tháng 2 29, 2024</li>
+                      <li>Tháng 8 29, 2024</li>
                     </ul>
                   </div>
 
@@ -225,7 +225,7 @@ const BlogThreeGrid: React.FC = () => {
                       <li>
                         <Link href="#">Admin</Link>
                       </li>
-                      <li>Tháng 2 30, 2024</li>
+                      <li>Tháng 8 30, 2024</li>
                     </ul>
                   </div>
 
@@ -235,7 +235,8 @@ const BlogThreeGrid: React.FC = () => {
                     </Link>
                   </h3>
                   <p>
-                    Thời trang Việt Nam đang trải qua nhiều thay đổi lớn trong thời gian gần đây, từ sự xuất hiện của các xu hướng mới đến những thay đổi trong cách thức thiết kế và tiêu thụ sản phẩm thời trang...
+                    Thời trang Việt Nam đang trải qua nhiều thay đổi lớn trong thời gian gần đây, 
+                    từ sự xuất hiện của các xu hướng mới đến những thay đổi trong cách thức thiết kế và tiêu thụ sản phẩm thời trang...
                   </p>
 
                   <Link href="https://dantri.com.vn/thoi-trang/nhung-thay-doi-trong-thoi-trang-viet-nam-gan-day-20230930123456789.htm" className="learn-more-btn">
@@ -247,31 +248,6 @@ const BlogThreeGrid: React.FC = () => {
 
             {/* Pagination */}
             <div className="col-lg-12 col-sm-12">
-              <div className="pagination-area">
-                <a href="#" className="prev page-numbers">
-                  <i className="fas fa-angle-double-left"></i>
-                </a>
-
-                <a href="#" className="page-numbers">
-                  1
-                </a>
-
-                <a href="#" className="page-numbers current">
-                  2
-                </a>
-
-                <a href="#" className="page-numbers">
-                  3
-                </a>
-
-                <a href="#" className="page-numbers">
-                  4
-                </a>
-
-                <a href="#" className="next page-numbers">
-                  <i className="fas fa-angle-double-right"></i>
-                </a>
-              </div>
             </div>
           </div>
         </div>

@@ -25,7 +25,7 @@ const About: React.FC = () => {
                   
                 />
                 <Image
-                  src="/images/Banner/nu1.webp"
+                  src="/images/Banner/nam4.jpg"
                   alt="image"
                   data-aos="fade-in"
                   data-aos-duration="1000"
@@ -45,7 +45,7 @@ const About: React.FC = () => {
                 data-aos-duration="1000"
                 data-aos-delay="600"
               >
-                <h2>Chúng tôi luôn lắng nghe bạn ê ê ê ê </h2>
+                <h2>Chúng tôi luôn lắng nghe bạn</h2>
                 <p>
                 “Sản phẩm luôn mới, chất lượng hàng đầu, giá cả hợp lý, mang đến cho bạn sự lựa chọn hoàn hảo. Hãy đến với chúng tôi để khám phá những bộ sưu tập thời trang mới nhất với mức giá ưu đãi nhất.”
                 </p>

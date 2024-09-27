@@ -14,7 +14,7 @@ const Shop = () => {
         homePageUrl='/'
         homePageText='Home'
         activePageText='Shop'
-        bgImg='/images/page-title-bg2.jpg'
+        bgImg='/images/page-title-bg1.jpg'
       />
 
       <Products />

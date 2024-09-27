@@ -28,30 +28,25 @@ const Footer: React.FC = () => {
                     />
                   </Link>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud.
+                    Nền tảng thương mại điện tử tập trung vào trải nghiệm người dùng và khả năng cập nhật,
+                    tất cả mọi thứ bạn cần đều có sẵn tại đây, chúng tôi luôn sẵn sàng tiếp nhận và phát triển.
+                    trải nghiệm của khách hàng là tất cả những gì chúng tôi hướng tới.
                   </p>
                 </div>
 
                 <ul className="social">
                   <li>
-                    <a href="https://www.facebook.com/" target="_blank">
+                    <a href="https://www.facebook.com/profile.php?id=61558788946584" target="_blank">
                       <i className="flaticon-facebook-letter-logo"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="https://twitter.com/" target="_blank">
-                      <i className="flaticon-twitter"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.instagram.com/" target="_blank">
+                    <a href="https://www.instagram.com/tr.t01" target="_blank">
                       <i className="flaticon-instagram-logo"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.youtube.com/" target="_blank">
+                    <a href="https://www.youtube.com/@trungtuan1114" target="_blank">
                       <i className="flaticon-youtube-play-button"></i>
                     </a>
                   </li>
@@ -66,23 +61,14 @@ const Footer: React.FC = () => {
                 data-aos-duration="1000"
                 data-aos-delay="200"
               >
-                <h3>Services</h3>
+                <h3>Dịch vụ</h3>
 
                 <ul className="footer-services-list">
                   <li>
-                    <Link href="/services/details">Product Engineering</Link>
+                    <Link href="/services/details"> mua sắm</Link>
                   </li>
                   <li>
-                    <Link href="/services/details">UX/UI Design</Link>
-                  </li>
-                  <li>
-                    <Link href="/services/details">Big Data Analysis</Link>
-                  </li>
-                  <li>
-                    <Link href="/services/details">Desktop Applications</Link>
-                  </li>
-                  <li>
-                    <Link href="/services/details">Mobile Applications</Link>
+                    <Link href="/services/details">liên hệ</Link>
                   </li>
                 </ul>
               </div>
@@ -95,23 +81,20 @@ const Footer: React.FC = () => {
                 data-aos-duration="1000"
                 data-aos-delay="300"
               >
-                <h3>Quick Links</h3>
+                <h3>truy cập nhanh </h3>
 
                 <ul className="quick-links-list">
                   <li>
-                    <Link href="/about-us">About Us</Link>
+                    <Link href="/about-us">về chúng tôi</Link>
                   </li>
                   <li>
                     <Link href="/blog">Blog</Link>
                   </li>
                   <li>
-                    <Link href="/contact">Contact</Link>
+                    <Link href="/contact">Liên hệ</Link>
                   </li>
                   <li>
-                    <Link href="/services">Services</Link>
-                  </li>
-                  <li>
-                    <Link href="/pricing">Pricing</Link>
+                    <Link href="/services">Dịch vụ</Link>
                   </li>
                 </ul>
               </div>
@@ -124,12 +107,12 @@ const Footer: React.FC = () => {
                 data-aos-duration="1000"
                 data-aos-delay="400"
               >
-                <h3>Contacts</h3>
+                <h3>Về chúng tôi</h3>
 
                 <ul className="footer-contact-list">
                   <li>
-                    <span>Address:</span>
-                    2750 Quadra Street <br /> Victoria, Canada
+                    <span>Địa chỉ:</span>
+                   84/11 phường thạnh xuân <br /> quận 12, Hồ chí Minh
                   </li>
                   <li>
                     <span>Email:</span>
@@ -155,8 +138,8 @@ const Footer: React.FC = () => {
               <div className="col-lg-6 col-md-6 col-sm-6">
                 <p>
                   Copyright &copy;{currentYear} Bariton. All Rights Reserved{" "}
-                  <a href="https://envytheme.com/" target="_blank">
-                    EnvyTheme
+                  <a href="#" target="_blank">
+                    TT & TP
                   </a>
                   .
                 </p>
