@@ -1,57 +1,62 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { dbConnect } from '@/db';
-
+import type { NextApiRequest, NextApiResponse } from "next";
+import { dbConnect } from "@/db";
+import axios from "axios";
 
 export interface Root {
-  cartItems: CartItem[]
+  cartItems: ICartItem[];
 }
 
-export interface CartItem {
-  id: number
-  productid: number
-  quantity: number
-  createdat: string
-  productsize: string
+export interface ICartItem {
+  id: number;
+  productid: number;
+  quantity: number;
+  createdat: string;
+  productsize: string;
 }
-
 
 export default async function handler(
-  req: NextApiRequest, 
-  res: NextApiResponse) {
-  if (req.method === 'POST') {
+  req: NextApiRequest,
+  res: NextApiResponse
+)
+ {
+  if (req.method === "POST") {
     try {
       const { productId, quantity, productSize } = req.body;
 
       if (!productId || !quantity || !productSize) {
-        return res.status(400).json({ error: 'Thiếu id sản phẩm, số lượng hoặc size' });
+        return res
+          .status(400)
+          .json({ error: "Thiếu id sản phẩm, số lượng hoặc size" });
       }
 
-      const result = await dbConnect.query(
-        `INSERT INTO cart (productId, quantity, createdAt, productSize) VALUES ($1, $2, NOW(),$3) RETURNING *`, 
+      const result = await dbConnect.query<ICartItem>(
+        `INSERT INTO cart (productId, quantity, createdAt, productSize) VALUES ($1, $2, NOW(),$3) RETURNING *`,
 
         [productId, quantity, productSize]
       );
 
-      const newCartItem: CartItem = result.rows[0];
+      const newCartItem: ICartItem = result.rows[0];
 
       return res.status(201).json(newCartItem);
-    }catch (error) {
+    } catch (error) {
       console.error("Error add products:", error);
       res.status(500).json({ message: "Lỗi  thêm sản phẩm" });
     }
   } else if (req.method === "GET") {
     // get theo id
-    const  page = req.query.page;
+    const page = req.query.page;
 
-    console.log("PAGE ",page);
+    console.log("PAGE ", page);
 
-    const result = await dbConnect.query<{ count: Number }>(
-      "SELECT * FROM cart"
+    const result = await dbConnect.query<ICartItem>(
+      ` select c.id, c.quantity, c.productsize, p.title, p.content, p.image, p.price
+        from cart as c
+        join product as p on p.id = c.productid`
     );
     const cartItems = result.rows;
 
     res.status(200).json({ cartItems });
   } else {
-    return res.status(405).json({ error: 'Phương thức không được hỗ trợ' });
+    return res.status(405).json({ error: "Phương thức không được hỗ trợ" });
   }
 }
