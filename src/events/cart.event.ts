@@ -10,26 +10,22 @@ export interface IAddCartData {
 export const addSanPhamToCart = async (data: IAddCartData) => {
   try {
     const res = await axios.post<ICartItem>("/api/cart", data);
-    console.log('ok')
   } catch (e) {
     console.error(e);
   }
 };
 
-export const editSanPhamToCart = async (cartid: number, quantity: number) => {
-  
-    const res = await axios.put("/api/cart/" + cartid, { quantity });
-    if  (res.status === 200) {
-    console.log('ok')
+export const editSanPhamToCart = async (cartid: number, quantity: number, productSize: string) => {
+  try {
+    const res = await axios.put("/api/cart/" + cartid, { quantity, productSize });
+  } catch (e) {
+    console.error(e);
   }
-  else 
-    console.error("lỗi");
-  }
-
+};
 
 export const deleteSanPhamToCart = async (cartid: number ) => {
   try {
-    const response = await axios.delete("/api/cart/" + cartid);
+    const response = await axios.delete(`/api/cart/${cartid}`);
     if (response.status === 200) {
         console.log('đã xóa');
       } else {
@@ -39,3 +35,5 @@ export const deleteSanPhamToCart = async (cartid: number ) => {
     console.error(e);
   }
 };
+
+ 

@@ -10,12 +10,8 @@ const ContactFormContent: React.FC = () => {
       <section className="contact-area ptb-110">
         <div className="container">
           <div className="section-title">
-            <span>Message Us</span>
-            <h2>Drop us Message for any Query</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+            <span>Mọi thắc mắc</span>
+            <h2>Xin hãy gửi thư cho chúng tôi</h2>
           </div>
 
           <div className="contact-form">
@@ -40,7 +36,7 @@ const ContactFormContent: React.FC = () => {
           {/* Contact info */}
           <div className="contact-info">
             <div className="contact-info-content">
-              <h3>Contact us by Phone Number or Email Address</h3>
+              <h3>Liên hệ với chúng tôi qua Số điện thoại hoặc Địa chỉ Email</h3>
               <h2>
                 <span className="number">0905298506</span>
                 <span className="or">OR</span>

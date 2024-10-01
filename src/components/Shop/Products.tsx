@@ -25,19 +25,14 @@ const Products: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState<IResData| null>(null);
 
-  // Giả lập thời gian load để hiện animation
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 500); // 2 giây để mô phỏng thời gian tải
-    return () => clearTimeout(timer);
-  }, [loading]);
-
   useEffect(() => {
     const loadData = async () => {
       try {
+        setLoading(true);
         const response = await axios.get<IResData>(`/api/sanpham?page1`);
         setData(response.data);
+        setLoading(false);
+
       } catch (e) {
         console.error(e);
       }
@@ -61,20 +56,14 @@ const Products: React.FC = () => {
             <div className="row align-items-center">
               <div className="col-lg-8 col-md-7 col-sm-6">
                 <div className="woocommerce-result-count">
-                  <p>Showing 18 of 18 results</p>
+                  <p>Hiển thị 18 trong số 18 kết quả</p>
                 </div>
               </div>
 
               <div className="col-lg-4 col-md-5 col-sm-6">
                 <div className="woocommerce-topbar-ordering">
                   <select className="form-select">
-                    <option value="1">Default sorting</option>
-                    <option value="2">Sort by popularity</option>
-                    <option value="0">Sort by average rating</option>
-                    <option value="3">Sort by latest</option>
-                    <option value="4">Sort by price: low to high</option>
-                    <option value="5">Sort by price: high to low</option>
-                    <option value="6">Sort by new</option>
+                    <option value="1">Sắp xếp mặc định</option>
                   </select>
                 </div>
               </div>

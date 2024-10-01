@@ -10,7 +10,7 @@ import React, {
   useCallback,
 } from "react";
 import axios from "axios";
-import { editSanPhamToCart } from "@/events/cart.event";
+import { deleteSanPhamToCart, editSanPhamToCart, addSanPhamToCart } from "@/events/cart.event";
 
 export interface Root {
   cartItems: CartItem[];
@@ -44,25 +44,62 @@ const CartTable: React.FC = () => {
   // Fetch data từ API
   useEffect(() => {
     loadData();
-  }, []);
+  }, [loadData]);
 
   if (loading) {
     return <div>Loading...</div>; // Loading indicator
   }
   const calculateTotal = (price: number, quantity: number) => price * quantity;
-
+  const calculateSubTotal = (cartItems: CartItem[]) => {
+    return cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+  };
   const handleChangeSoLuong = async (
     item: CartItem,
     e: ChangeEvent<HTMLInputElement>
   ) => {
     const soLuong = Number(e.target.value);
-
-    //gọi hàm update dữ liệu  lên API
-    await editSanPhamToCart(item.id, soLuong);
-
-    // load lại dữ liệu sau khi update
-    const data = await loadData();
+    if (isNaN(soLuong) || soLuong < 0) {
+      // Nếu số lượng không hợp lệ
+      alert("Số lượng không hợp lệ");
+      return;
+    }
+    if (soLuong < 1) {
+      // Nếu số lượng là 0, xóa sản phẩm
+      await deleteSanPhamToCart(item.id);
+    } else {
+      //update dữ liệu lên API nếu số lượng hợp lệ
+      await editSanPhamToCart(item.id, soLuong, item.productsize);
+    }
+  
+    // load lại dữ liệu 
+    await loadData();
   };
+
+  //  xử lý xóa sản phẩm
+  const handleDelete = async (id: number) => {
+    await deleteSanPhamToCart(id);
+    await loadData(); // Tải lại dữ liệu sau khi xóa
+  };
+if (data && data.length === 0) {
+    return  (
+    <div
+      className="empty cart text-center"
+      data-aos-duration="1000"
+      data-aos-delay="600"
+      data-aos-content="center"
+  >
+    <h2>Giỏ hàng trống</h2>
+    <p>
+    đến cửa hàng của chúng tôi 
+    </p>
+   
+
+    <Link href="/shop" className="btn btn-primary">
+      Mua sắm 
+    </Link>
+  </div>
+  ); // Hiển thị thông báo nếu không có sản phẩm nào
+ } else {
 
   return (
     <div className="cart-area ptb-110">
@@ -74,11 +111,12 @@ const CartTable: React.FC = () => {
                 <table className="table table-bordered">
                   <thead>
                     <tr>
-                      <th scope="col">Product</th>
-                      <th scope="col">Name</th>
-                      <th scope="col">Unit Price</th>
-                      <th scope="col">Quantity</th>
-                      <th scope="col">Total</th>
+                      <th scope="col">Sản phẩm </th>
+                      <th scope="col">Tên sản phẩm</th>
+                      <th scope="col">Đơn giá </th>
+                      <th scope="col">Số lượng</th>
+                      <th scope="col">Tạm tính</th>
+                      <th scope="col">xóa</th>
                     </tr>
                   </thead>
                   {data && (
@@ -126,7 +164,13 @@ const CartTable: React.FC = () => {
                               {calculateTotal(CartItem.price, CartItem.quantity)}
                             </span>{" "}
                             {/* Tính tổng giá */}
-                            <button type="button" className="remove">
+                          </td>
+                          <td className="product-actions"> {/* Thêm ô cho Actions */}
+                            <button 
+                              type="button" 
+                              className="remove"
+                              onClick={() => handleDelete(CartItem.id)} // Gọi hàm xóa khi nhấn
+                            >
                               <i className="far fa-trash-alt"></i>
                             </button>
                           </td>
@@ -144,12 +188,17 @@ const CartTable: React.FC = () => {
                       <input
                         type="text"
                         className="form-control"
-                        placeholder="Coupon code"
+                        placeholder="Nhập mã voucher"
+
                         name="coupon-code"
                         id="coupon-code"
                       />
-                      <button type="submit">Apply Coupon</button>
+                      <button 
+                      type="button" 
+                      onClick={() => alert("Mã giảm giá không hợp lệ hoặc không tồn tại!")} 
+                      >Áp dụng Vocher</button>
                     </div>
+                    
                   </div>
 
                   <div className="col-lg-5 col-sm-5 col-md-5 text-right"></div>
@@ -157,23 +206,23 @@ const CartTable: React.FC = () => {
               </div>
 
               <div className="cart-totals">
-                <h3>Cart Totals</h3>
+               
                 <ul>
                   <li>
-                    Subtotal <span>$150.00</span> {/* Tổng tiền */}
+                  Tổng <span>{ data ? calculateSubTotal(data):0} VND</span> {/* Tổng tiền */}
                   </li>
                   <li>
-                    Shipping <span>$30.00</span>
+                    Phí Ship <span>30.000 VND</span>
                   </li>
                   <li>
-                    Total{" "}
+                    Thành Tiền {" "}
                     <span>
-                      <b>$180.00</b>
+                      <b>{ data ? (calculateSubTotal(data)+30000):0} VND</b>
                     </span>
                   </li>
                 </ul>
                 <Link href="/checkout/" className="btn btn-primary">
-                  Proceed to Checkout
+                 Thanh Toán 
                 </Link>
               </div>
             </form>
@@ -183,5 +232,5 @@ const CartTable: React.FC = () => {
     </div>
   );
 };
-
+}
 export default CartTable;

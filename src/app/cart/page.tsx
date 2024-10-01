@@ -1,5 +1,5 @@
 import React from "react";
-import NavbarTwo from "../../components/Layouts/NavbarTwo";
+import NavbarTwo from '../../components/Layouts/Navbar';
 import PageBanner from "../../components/Common/PageBanner";
 import Footer from "../../components/Layouts/Footer";
 import CartTable from "../../components/Shop/CartTable";
@@ -10,10 +10,10 @@ export default function Page() {
       <NavbarTwo />
 
       <PageBanner
-        pageTitle="Cart"
+        pageTitle="Giỏ Hàng"
         homePageUrl="/"
-        homePageText="Home"
-        activePageText="Cart"
+        homePageText="Trang Chủ"
+        activePageText="Giỏ Hàng"
         bgImg="/images/page-title-bg1.jpg"
       />
 

@@ -49,9 +49,9 @@ export default async function handler(
     console.log("PAGE ", page);
 
     const result = await dbConnect.query<ICartItem>(
-      ` select c.id, c.quantity, c.productsize, p.title, p.content, p.image, p.price
-        from cart as c
-        join product as p on p.id = c.productid`
+      `SELECT c.id AS cartId, p.id AS productId, c.id, c.quantity, c.productsize, p.title, p.image, p.price
+        FROM cart AS c 
+        JOIN product AS p ON p.id = c.productid`
     );
     const cartItems = result.rows;
 

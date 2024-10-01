@@ -94,7 +94,10 @@ const Footer: React.FC = () => {
                     <Link href="/contact">Liên hệ</Link>
                   </li>
                   <li>
-                    <Link href="/services">Dịch vụ</Link>
+                    <Link href="/services/details">Dịch vụ</Link>
+                  </li>
+                  <li>
+                    <Link href="/team">nhóm thực hiện</Link>
                   </li>
                 </ul>
               </div>

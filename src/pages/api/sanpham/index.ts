@@ -5,12 +5,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  if (req.method === "POST") {
-    const data = req.body;
-    console.log(data);
-    // insert dữ liệu
-    res.status(201).json(data);
-  } else if (req.method === "GET") {
+  if (req.method === "GET") {
     // get theo id
     const  page = req.query.page;
 
@@ -23,5 +18,5 @@ export default async function handler(
     const soTrang = 3;
 
     res.status(200).json({ sanPhams, soTrang });
-  } else res.status(404).json({ error: "Not found" });
+  } else res.status(404).json({ error: "không tìm thấy" });
 }

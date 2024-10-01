@@ -85,7 +85,7 @@ const Navbar: React.FC = () => {
                 <div className='others-options'>
                   <Link href='/cart/' className='cart-btn'>
                     <i className='flaticon-commerce-and-shopping'></i>
-                    <span>1</span>
+                    <span>!</span>
                   </Link>
 
                   <div className='option-item'>
@@ -95,9 +95,9 @@ const Navbar: React.FC = () => {
                     ></i>
                   </div>
                    
-                  <Link href='/contact/' className='btn btn-primary'>
-                    quan que
-                  </Link> 
+                  {/* <Link href='/contact/' className='btn btn-primary'>
+                    Liên Hệ 
+                  </Link>  */}
                 </div>
               </div>
             </nav>

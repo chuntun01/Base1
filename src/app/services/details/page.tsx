@@ -3,25 +3,29 @@ import NavbarTwo from "../../../components/Layouts/NavbarTwo";
 import PageBanner from "../../../components/Common/PageBanner";
 import ServiceDetailsContent from "../../../components/Services/ServiceDetailsContent";
 import Footer from "../../../components/Layouts/Footer";
+import FeedbackSlider from "../../../components/Services/ServiceDetailsContent";
 
-const ServiceDetails = () => {
+
+const Services = () => {
   return (
     <>
       <NavbarTwo />
 
       <PageBanner
-        pageTitle="Security & Surveillance"
+        pageTitle="dịch vụ"
         homePageUrl="/"
-        homePageText="Home"
-        activePageText="Service Details"
+        homePageText="Trang chủ"
+        activePageText="dịch vụ"
         bgImg="/images/page-title-bg2.jpg"
       />
 
       <ServiceDetailsContent />
+
+      <FeedbackSlider />
 
       <Footer />
     </>
   );
 };
 
-export default ServiceDetails;
+export default Services;

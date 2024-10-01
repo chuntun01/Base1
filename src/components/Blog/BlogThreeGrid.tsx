@@ -40,7 +40,8 @@ const BlogThreeGrid: React.FC = () => {
                   </h3>
 
                   <p>
-                    Thời trang Việt Nam đã có những bước tiến vượt bậc trong những năm gần đây. Từ áo dài truyền thống đến các thiết kế hiện đại, sự kết hợp giữa truyền thống và hiện đại đã tạo ra những bộ sưu tập ấn tượng...
+                    Thời trang Việt Nam đã có những bước tiến vượt bậc trong những năm gần đây. Từ áo dài truyền thống đến các thiết kế hiện đại, sự kết hợp giữa truyền thống và hiện đại
+                     đã tạo ra những bộ sưu tập ấn tượng...
                   </p>
 
                   <Link href="https://vnexpress.net/thoi-trang-viet-nam-su-chuyen-minh-manh-me-trong-nam-2024-4567328.html" className="learn-more-btn">

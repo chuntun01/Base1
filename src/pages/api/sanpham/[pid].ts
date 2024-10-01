@@ -14,7 +14,7 @@ export default async function handler(
     // insert dữ liệu
     res.status(201).json(data);
   } else if (req.method === 'DELETE') {
-    // Xóa trường dữ liệu
+    // Xóa dữ liệu
   } else if (req.method === 'GET') {
     // get theo id
     const result = await dbConnect.query(`SELECT * FROM product where id=${pid}`);

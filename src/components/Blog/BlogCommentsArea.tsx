@@ -31,7 +31,10 @@ const BlogCommentsArea: React.FC = () => {
 
               <div className="comment-content">
                 <p>
-                  Thời trang Việt Nam đã phát triển mạnh mẽ trong những năm gần đây, từ những bộ trang phục truyền thống như áo dài đến các thiết kế hiện đại và sáng tạo. Các nhà thiết kế Việt Nam không ngừng sáng tạo và mang đến những xu hướng mới mẻ, kết hợp giữa yếu tố truyền thống và hiện đại.
+                  Thời trang Việt Nam đã phát triển mạnh mẽ trong những năm gần đây, 
+                  từ những bộ trang phục truyền thống như áo dài đến các thiết kế hiện đại và sáng tạo. 
+                  Các nhà thiết kế Việt Nam không ngừng sáng tạo và mang đến những xu hướng mới mẻ, kết 
+                  hợp giữa yếu tố truyền thống và hiện đại.
                 </p>
               </div>
 

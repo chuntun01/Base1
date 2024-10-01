@@ -15,7 +15,7 @@ const FreeTrialForm: React.FC = () => {
               data-aos-duration="1000"
               data-aos-delay="200"
               style={{
-                backgroundImage: `url(#)`,
+                backgroundImage: `/images/woman2.jpg`,
               }}
             >
               <Image
@@ -42,7 +42,9 @@ const FreeTrialForm: React.FC = () => {
                   className="input-newsletter"
                   placeholder="Nhập Địa Chỉ Email"
                 />
-                <button type="submit">Đăng Kí </button>
+                <button  type="button" 
+                      onClick={() => alert("Đăng kí thành công!")}>
+                  Đăng Kí </button>
               </form>
 
               <p>
