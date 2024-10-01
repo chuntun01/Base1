@@ -155,35 +155,6 @@ const ServicesContent: React.FC = () => {
                 </p>
               </div>
             </div>
-
-            {/* Pagination */}
-            <div className="col-lg-12 col-sm-12">
-              <div className="pagination-area">
-                <a href="#" className="prev page-numbers">
-                  <i className="fas fa-angle-double-left"></i>
-                </a>
-
-                <a href="#" className="page-numbers">
-                  1
-                </a>
-
-                <a href="#" className="page-numbers current">
-                  2
-                </a>
-
-                <a href="#" className="page-numbers">
-                  3
-                </a>
-
-                <a href="#" className="page-numbers">
-                  4
-                </a>
-
-                <a href="#" className="next page-numbers">
-                  <i className="fas fa-angle-double-right"></i>
-                </a>
-              </div>
-            </div>
           </div>
         </div>
 

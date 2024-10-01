@@ -12,8 +12,8 @@ const Shop = () => {
       <PageBanner
         pageTitle='Shop'
         homePageUrl='/'
-        homePageText='Home'
-        activePageText='Shop'
+        homePageText='Trang chủ'
+        activePageText='Cửa hàng'
         bgImg='/images/page-title-bg1.jpg'
       />
 

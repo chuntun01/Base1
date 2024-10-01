@@ -17,55 +17,7 @@ const Team: React.FC = () => {
           </div>
 
           <div className="row justify-content-center">
-            <div
-              className="col-lg-3 col-sm-6"
-              data-aos="fade-in"
-              data-aos-duration="1000"
-              data-aos-delay="200"
-            >
-              <div className="single-team-box">
-                <div className="image">
-                  <Image
-                    src="/images/team/team1.jpg"
-                    alt="Team Image"
-                    width={510}
-                    height={510}
-                  />
-
-                  <div className="social">
-                    <a
-                      href="https://www.facebook.com/"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <i className="fab fa-facebook-f"></i>
-                    </a>
-
-                    <a
-                      href="https://twitter.com/"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <i className="fab fa-twitter"></i>
-                    </a>
-
-                    <a
-                      href="https://www.instagram.com/"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <i className="fab fa-instagram"></i>
-                    </a>
-                  </div>
-                </div>
-
-                <div className="content">
-                  <h3>John Smith</h3>
-                  <span>CEO & Founder</span>
-                </div>
-              </div>
-            </div>
-
+            
             <div
               className="col-lg-3 col-sm-6"
               data-aos="fade-in"
@@ -170,47 +122,6 @@ const Team: React.FC = () => {
               data-aos-duration="1000"
               data-aos-delay="500"
             >
-              <div className="single-team-box">
-                <div className="image">
-                  <Image
-                    src="/images/team/team4.jpg"
-                    alt="Team Image"
-                    width={510}
-                    height={510}
-                  />
-
-                  <div className="social">
-                    <a
-                      href="https://www.facebook.com/"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <i className="fab fa-facebook-f"></i>
-                    </a>
-
-                    <a
-                      href="https://twitter.com/"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <i className="fab fa-twitter"></i>
-                    </a>
-
-                    <a
-                      href="https://www.instagram.com/"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <i className="fab fa-instagram"></i>
-                    </a>
-                  </div>
-                </div>
-
-                <div className="content">
-                  <h3>Sarah Taylor</h3>
-                  <span>Designer</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>

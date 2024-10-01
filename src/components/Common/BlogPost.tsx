@@ -10,10 +10,10 @@ const BlogPost: React.FC = () => {
       <section className="blog-area ptb-110">
         <div className="container">
           <div className="section-title">
-            <h2>Our Recent News</h2>
+            <h2>Tin tức mới từ chúng tôi </h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              theo dõi blog của chúng tôi để cập nhật thật nhiều ưu đãi và các chương trình khuyến mãi cũng như tri ân khách hàng, 
+              đặc biệt là các chương trình biểu diễn do chính nhãn hàng tổ chức.
             </p>
           </div>
 
@@ -42,19 +42,17 @@ const BlogPost: React.FC = () => {
                       <li>
                         <Link href="/blog">Admin</Link>
                       </li>
-                      <li>March 10, 2023</li>
+                      <li>March 5, 2024</li>
                     </ul>
                   </div>
 
                   <h3>
                     <Link href="/blog/details">
-                      Making Peace With The Feast Or Famine Of Freelancing
-                    </Link>
+                    BST Loewe Xuân-Hè 2025: Một kỷ nguyên vang dội của Johnathan Anderson </Link>
                   </h3>
 
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod...
+                  Ngày 27/9 vừa qua (theo giờ Việt Nam), Loewe đã cho ra mắt BST Xuân-Hè 2025 với sự tham gia của...
                   </p>
 
                   <Link href="/blog/details" className="learn-more-btn">
@@ -88,18 +86,17 @@ const BlogPost: React.FC = () => {
                       <li>
                         <Link href="/blog">Admin</Link>
                       </li>
-                      <li>March 11, 2023</li>
+                      <li>March 13, 2024</li>
                     </ul>
                   </div>
 
                   <h3>
                     <Link href="/blog/details">
-                      I Used The Web For A Day On A 50 MB Budget
+                    Châu Bùi, Baifern cùng dàn sao quốc tế khuấy động show Loewe Xuân-Hè 2025
                     </Link>
                   </h3>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod...
+                  Gal Gadot, Châu Bùi, Dương Mịch, Baifern... khoe cá tính tại show diễn ra mắt BST Loewe Xuân-Hè...
                   </p>
 
                   <Link href="/blog/details" className="learn-more-btn">
@@ -133,18 +130,17 @@ const BlogPost: React.FC = () => {
                       <li>
                         <Link href="/blog">Admin</Link>
                       </li>
-                      <li>March 12, 2023</li>
+                      <li>March 17, 2024</li>
                     </ul>
                   </div>
 
                   <h3>
                     <Link href="/blog/details">
-                      Here are the 5 most telling signs of micromanagement
+                    Gucci ra mắt chiến dịch quảng bá mới với sự tham gia của Debbie Harry và Kelsey Lu
                     </Link>
                   </h3>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod...
+                  Gucci ra mắt "We Will Always Have London" - một chiến dịch quảng bá mới của Giám đốc sáng tạo...
                   </p>
 
                   <Link href="/blog/details" className="learn-more-btn">

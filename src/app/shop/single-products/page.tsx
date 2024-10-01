@@ -24,6 +24,7 @@ const SingleProducts = ({ params }: { params: { id: string } }) => {
 
   return (
     <>
+    
       <NavbarTwo />
 
       <PageBanner

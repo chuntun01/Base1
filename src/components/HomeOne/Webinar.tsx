@@ -18,16 +18,17 @@ const Webinar: React.FC = () => {
         <div className="row m-0">
           <div className="col-lg-6 p-0">
             <div className="webinar-content">
-              <h2>Check Out Our Latest Webinar</h2>
+              <h2>Hãy xem thông tin mới nhất từ chúng tôi</h2>
               <p>
-                There are many variations of passages of Lorem Ipsum available,
-                but the majority have suffered alteration in some form, by
-                injected humour, or randomised words which don't look even
-                slightly believable. If you are going to use a passage.
+              Phát triển từ một cửa hàng nhỏ thành địa chỉ tin cậy cho tín đồ thời trang. 
+              Giờ đây, với  hội thảo "Định hình phong cách cá nhân", 
+              thu hút sự quan tâm của khách hàng và chuyên gia trong ngành. 
+              Sự kiện tạo cơ hội giao lưu và chia sẻ kiến thức về xu hướng thời trang. Đánh dấu một cột mốc quan trọng 
+              trong sự phát triển về sau. 
               </p>
 
               <Link href="#" className="btn btn-primary">
-                Watch More
+                Xem thêm
               </Link>
             </div>
           </div>

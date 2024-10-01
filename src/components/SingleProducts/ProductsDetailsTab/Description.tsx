@@ -20,7 +20,7 @@ CHẤT LIỆU:
 - 49% Bamboo từ sợi tre thiên nhiên mang đến sự thoáng mát, thấm hút tốt và tạo cảm giác thoải mái.
 - 48% Polyester giúp áo mỏng nhẹ, có độ trơn trượt, màu sắc nét và giữ màu tốt theo thời gian.
 - 3% Spandex tạo độ co giãn thoải mái khi mặc.  </p>
-<p>MÀU SẮC: Xanh in họa tiết</p>
+
 
         
         </div>

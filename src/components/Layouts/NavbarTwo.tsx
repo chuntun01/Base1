@@ -85,7 +85,7 @@ const NavbarTwo: React.FC = () => {
                 <div className='others-options'>
                   <Link href='/cart' className='cart-btn'>
                     <i className='flaticon-commerce-and-shopping'></i>
-                    <span>1</span>
+                    <span>!</span>
                   </Link>
 
                   <div className='option-item'>

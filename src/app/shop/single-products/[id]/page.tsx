@@ -2,9 +2,12 @@
 
 import { useEffect, useState } from "react";
 import axios from "axios";
-import SingleProductsContent, { ISanPham } from "@/components/Shop/SingleProductsContent";
-
-
+import SingleProductsContent, {
+  ISanPham,
+} from "@/components/Shop/SingleProductsContent";
+import NavbarTwo from "../../../../..//src/components/Layouts/NavbarTwo";
+import Footer from "../../../../..//src/components/Layouts/Footer";
+import PageBanner from "../../../../..//src/components/Common/PageBanner";
 
 export default function ChiTietSanPham({ params }: { params: { id: string } }) {
   console.log(params.id);
@@ -27,9 +30,20 @@ export default function ChiTietSanPham({ params }: { params: { id: string } }) {
     loadData();
   }, []);
 
-  return <>
-  {
-  data && <SingleProductsContent sanPham={data} />
-  }
-  </>;
+  return (
+    <>
+      <NavbarTwo />
+      <PageBanner
+
+        pageTitle='Sản Phẩm'
+        homePageUrl='/'
+        homePageText='Trang Chủ'
+        activePageText='Sản Phẩm'
+
+        bgImg='/images/page-title-bg1.jpg'
+      />
+      {data && <SingleProductsContent sanPham={data} />}
+      <Footer />
+    </>
+  );
 }

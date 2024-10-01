@@ -10,7 +10,6 @@ export default async function handler(
     const result = await dbConnect.query<{ count: number }>(
       "SELECT id, title, image, price, image1, image2, content, oldprice FROM product"
     );
-
     // Lấy danh sách sản phẩm 
     const sanPhams = result.rows;
     const soTrang = 3; // tính toán số trang

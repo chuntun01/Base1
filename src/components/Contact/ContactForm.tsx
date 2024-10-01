@@ -48,7 +48,7 @@ const ContactForm: React.FC = () => {
             <input
               type="text"
               name="name"
-              placeholder="Name"
+              placeholder="HỌ và TÊN"
               className="form-control"
               value={formData.name}
               onChange={handleChange}
@@ -76,7 +76,7 @@ const ContactForm: React.FC = () => {
             <input
               type="text"
               name="number"
-              placeholder="Phone number"
+              placeholder="SĐT"
               className="form-control"
               value={formData.number}
               onChange={handleChange}
@@ -90,7 +90,7 @@ const ContactForm: React.FC = () => {
             <input
               type="text"
               name="subject"
-              placeholder="Subject"
+              placeholder="Chủ đề"
               className="form-control"
               value={formData.subject}
               onChange={handleChange}
@@ -105,7 +105,7 @@ const ContactForm: React.FC = () => {
               name="text"
               cols={30}
               rows={6}
-              placeholder="Write your message..."
+              placeholder="Viết tin nhắn của bạn..."
               className="form-control"
               value={formData.text}
               onChange={handleChange}
@@ -115,8 +115,10 @@ const ContactForm: React.FC = () => {
         </div>
 
         <div className="col-lg-12 col-sm-12">
-          <button type="submit" className="btn btn-primary">
-            Send Message
+          <button type="submit" 
+          className="btn btn-primary"
+          onClick={() => alert("Gửi thành công!")}>
+          Gửi tin nhắn
           </button>
         </div>
       </div>
@@ -125,4 +127,3 @@ const ContactForm: React.FC = () => {
 };
 
 export default ContactForm;
-

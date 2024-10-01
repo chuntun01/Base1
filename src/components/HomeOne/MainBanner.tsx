@@ -22,7 +22,7 @@ const MainBanner: React.FC = () => {
                   data-aos-duration="1000"
                   data-aos-delay="100"
                 >
-                Shopping with Bariton 
+                Mua sắm với Bariton !!
                 </h1> 
                 <p
                   data-aos="fade-up"
@@ -49,7 +49,6 @@ const MainBanner: React.FC = () => {
           </div>
         </div>
 
-         Featured Services 
         <FeaturedServices />
       </div>
     </>

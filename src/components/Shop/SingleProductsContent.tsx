@@ -10,6 +10,7 @@ import "swiper/css/pagination"; // Import pagination styles
 import { Navigation, Pagination, Autoplay } from "swiper/modules"; // Import Autoplay module
 import RelatedProducts from "../SingleProducts/RelatedProducts";
 import ProductsDetailsTab from "../SingleProducts/ProductsDetailsTab";
+import axios from "axios";
 
 export interface ISanPham {
   id: number;
@@ -30,10 +31,35 @@ export interface IResData {
   export default function ({ sanPham }: { sanPham: ISanPham;}) {
   const [quantity, setQuantity] = useState(1);
   const swiperRef = useRef<any>(null); // Create a ref for Swiper instance
+  const [size, setSize] = useState<string | null>(null); // Thêm state cho kích cỡ
   const totalSlides = 3; // Set total number of slides
 
   const changeQuantity = (amount: number) => {
     setQuantity((prev) => Math.max(1, prev + amount));
+  };
+  const handleAddToCart = async () => {
+    if (!size) {
+      alert("Vui lòng chọn kích cỡ!");
+      return;
+    }
+
+    try {
+      const response = await axios.post("/api/cart", { productId: sanPham.id, quantity, productSize: size }
+      );
+
+      if (response.status === 201) {
+        alert("Sản phẩm đã được thêm vào giỏ hàng!");
+      } else {
+        alert("Có lỗi xảy ra, vui lòng thử lại.");
+      }
+    } catch (error) {
+      console.error("Error adding to cart:", error);
+      alert("Đã xảy ra lỗi khi thêm sản phẩm vào giỏ hàng.");
+    }
+  };
+
+  const handleSizeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSize(e.target.value); // Cập nhật kích cỡ được chọn
   };
 
   const handleSlideChange = () => {
@@ -102,10 +128,15 @@ export interface IResData {
 
               {/* Radio Button Group */}
               <div style={{ display: "flex", gap: "30px" }}>
-                {["S", "M", "L"].map((size) => (
-                  <label key={size} style={{ textAlign: "center" }}>
-                    <input type="radio" name="size" value={size} />
-                    <div>{size}</div>
+                {["S", "M", "L"].map((sizeOption)=> (
+                  <label key={sizeOption} style={{ textAlign: "center" }}>
+                   <input
+                      type="radio"
+                      name="size"
+                      value={sizeOption}
+                      onChange={handleSizeChange} // Gọi hàm khi kích cỡ thay đổi
+                    />
+                    <div>{sizeOption}</div>
                   </label>
                 ))}
               </div>
@@ -161,14 +192,17 @@ export interface IResData {
                 </div>
 
                 <div style={{ marginTop: "20px" }}>
-                  <button className="btn btn-primary">
+                  <button 
+                  className="btn btn-primary"
+                  onClick={handleAddToCart} // Gọi hàm khi nhấn nút
+                  >
                     <i className="fas fa-cart-plus"></i> Thêm vào giỏ hàng
                   </button>
                 </div>
               </div>
 
               <Link
-                href="#"
+                href="/checkout/"
                 className="btn btn-light"
                 style={{ marginTop: "20px" }}
               >

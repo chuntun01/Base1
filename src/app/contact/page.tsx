@@ -10,10 +10,10 @@ export default function Page() {
       <NavbarTwo />
 
       <PageBanner
-        pageTitle='Contact'
+        pageTitle='Liên hệ'
         homePageUrl='/'
-        homePageText='Home'
-        activePageText='Contact'
+        homePageText='Trang chủ'
+        activePageText='Liên hệ'
         bgImg='/images/page-title-bg3.jpg'
       />
 

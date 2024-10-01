@@ -32,8 +32,8 @@ const dosis = Dosis({
 });
 
 export const metadata: Metadata = {
-  title: "Bariton - IT Machine Learning React Next Template",
-  description: "IT Machine Learning React Next Template",
+  title: "Bariton - Men Shop",
+  description: "Men Shop",
 };
 
 export default function RootLayout({

@@ -13,7 +13,7 @@ export default function Page() {
       <PageBanner
         pageTitle="Our Team"
         homePageUrl="/"
-        homePageText="Home"
+        homePageText="Trang chủ"
         activePageText="Team"
         bgImg="/images/page-title-bg1.jpg"
       />
